@@ -1,0 +1,40 @@
+.logo {
+  height: 3em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 1em rgba(255, 255, 255, 0.5));
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo {
+    animation: logo-float infinite 3s ease-in-out;
+  }
+}
+
+@keyframes logo-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.forecast-card {
+  transition: all 0.3s ease;
+}
+
+.forecast-card:hover {
+  transform: translateY(-5px);
+}
+
+.search-container {
+  transition: all 0.3s ease;
+}
+
+.search-container:focus-within {
+  transform: scale(1.02);
+}
